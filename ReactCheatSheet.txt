@@ -1,0 +1,18 @@
+React Start Up Cheat Sheet
+
+You need to download the node package manager NPM if it's not already installed it is similar to PIP
+
+create an empty folder/directory
+
+make sure to cd into the empty directory
+
+type as shown in your terminal: npx create-react-app name_of_my_app
+
+type npx start in your terminal and a new browser tab should be opened 
+
+we won't use most of the files that it generates for us the main ones we need
+to focus on are  App.js and the index.js files located in the src directory
+
+
+
+https://create-react-app.dev/docs/getting-started
