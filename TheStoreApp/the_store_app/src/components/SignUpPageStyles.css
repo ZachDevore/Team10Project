@@ -1,0 +1,44 @@
+/* .EmailInput{
+    padding: 20px;
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.PasswordInput{
+    padding: 20px;
+    position:absolute;
+    top: 5; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 20px;
+    box-sizing: border-box;
+} */
+input{
+    display: block;
+    cursor:text;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: block;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #151516;
+    color: #fff;
+  }
+
+.SignUpBtn{
+    margin-top: 60px;
+}
