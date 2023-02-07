@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import SignUpPage from './components/SignUpPage';
 import './App.css';
+import PopUp from './components/PopUp';
 
 function App() {
   return (
     <div className="App">
-      <SignUpPage />
+      <PopUp />
     </div>
   );
 }
 
 export default App;
+
+
