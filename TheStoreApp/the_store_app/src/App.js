@@ -1,25 +1,32 @@
+import React, { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Details from './components/Details';
+import Cart from './components/Cart';
+import Default from './components/Default';
+import Dealpage from './components/Dealpage';
+// import Product from './components/Product';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return ( 
+      <React.Fragment>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path='/' element={<ProductList></ProductList>}></Route>
+          <Route path='/details' element={<Details></Details>}></Route>
+          <Route path='/cart' element={<Cart></Cart>}></Route>
+          <Route path='/deal' element={<Dealpage></Dealpage>}></Route>
+          <Route element={<Default></Default>}></Route>
+        </Routes>
+      </React.Fragment >
+
+   );
+  }
 }
 
-export default App;
+export default App;//45:19
