@@ -1,4 +1,16 @@
-div {
-    height: 1000px;
+.productInfo {
     background-color: aqua;
+    height: 60vh;
+    width: 90vw;
+    margin: 0 5vh;
+    
+    
 }
+
+.productInfo img {
+    padding-top: 5vh;
+}
+
+
+
+
