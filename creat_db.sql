@@ -17,8 +17,10 @@ CREATE TABLE PRODUCTS (
     ProductID INT PRIMARY KEY NOT NULL,
     ProductName VARCHAR(255) NOT NULL,
     ProductPrice FLOAT NOT NULL,
-    ProductDescription VARCHAR(255) NOT NULL
+    ProductDescription VARCHAR(255) NOT NULL,
+    ProductImage BLOB
 );
+
 
 CREATE TABLE INVENTORY (
     InventoryID INT PRIMARY KEY NOT NULL,
