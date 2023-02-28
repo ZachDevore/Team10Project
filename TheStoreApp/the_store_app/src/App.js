@@ -1,14 +1,11 @@
-import logo from './logo.svg';
-import NavigationBar from './Components/NavigationBar';
-import {Route, Routes} from "react-router-dom";
-import IndividualProductView from './Pages/IndividualProductView';
+import React from 'react'; // add this line to import the React object
 import Login from './Components/Login';
 
 function App() {
-  
+
   return (
     <>
-      <IndividualProductView />
+      
       <Login />
     </>
   );
