@@ -1,5 +1,5 @@
 import './App.css';
-import PopUp from './components/PopUp';
+import PopUp from './Components/PopUp';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import SignUp from "./SignUpPage";
+import SignUp from "./SignUpPage"
 
 export default class PopUp extends React.Component {
   state = {

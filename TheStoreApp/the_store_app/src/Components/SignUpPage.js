@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./SignUpPageStyles.css";
+import "../Styles/SignUpPageStyles.css";
 
 export default class SignUp extends Component {
   handleClick = () => {
