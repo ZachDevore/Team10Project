@@ -1,0 +1,22 @@
+body, table {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+tr, td {
+    background-color: black;
+    color: white;
+}
+
+input, option, button, textarea, select {
+    background-color: lightgrey;
+}
+
+label {
+    float: right;
+}
+
+input, select {
+    float: left;
+}
