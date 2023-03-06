@@ -1,5 +1,6 @@
 import React from 'react'; // add this line to import the React object
 import Login from './Components/Login';
+import ShoppingCart from '.Components/ShoppingCart';
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       
       <Login />
+      <ShoppingCart /> {/* add the ShoppingCart component */}
     </>
   );
 }
