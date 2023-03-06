@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css'; // replace with your own CSS file
+import './Login.css';
 
 function Login(props) {
   const [email, setEmail] = useState('');
@@ -8,7 +8,7 @@ function Login(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Email: ${email}, Password: ${password}`);
-    // Here you can add code to authenticate the user and redirect them to the appropriate page
+  
   }
 
   return (
