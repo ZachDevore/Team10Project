@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--Name: Emma Gostling
+	filename: addProductPage.html
+	-->
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A Beautiful Life</title>
+</head>
+<style>
+    body, table {
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+    }
+
+    tr, td {
+        background-color: black;
+        color: white;
+    }
+
+    input, option, button, textarea, select {
+        background-color: lightgrey;
+    }
+
+    label {
+        float: right;
+    }
+
+    input, select {
+        float: left;
+    }
+</style>
+<body>
+    <table style="width:100%;       ">
+        <colgroup>
+            <col style="width: 20%;">
+            <col style="width: 30%;">
+            <col style="width: 20%;">
+            <col style="width: 30%;">
+        </colgroup>
+        <tr>
+            <td id="navBar" style="text-align: center; border: 1px solid white;" colspan="4">Nav Bar</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="border: 1px solid white;">
+                <div id="dragDrop" style="height: 300px; width: 100%; text-align: center; line-height: 300px; vertical-align: middle;">Drag & Drop space</div>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top: 15px;">
+                <label>Product Name:</label>
+            </td>
+            <td style="padding-top: 15px;">
+                <input type="text" size="40">
+            </td>
+            <td style="padding-top: 15px;">
+                <label>Initial Quantity:</label>
+            </td>
+            <td style="padding-top: 15px;">
+                <input type="text" size="40">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Product Price:</label>
+            </td>
+            <td>
+                <input type="text" size="40" placeholder="$0.00">
+            </td>
+            <td>
+                <label>Minimum Stock Level:</label>
+            </td>
+            <td>
+                <input type="text" size="40">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Supplier:</label>
+            </td>
+            <td>
+                <select type="text">
+                    <option>Example</option>
+                    <option>Test</option>
+                </select>
+                <button>Add</button>
+            </td>
+            <td>
+                <label>Reorder Point:</label>
+            </td>
+            <td>
+                <input type="text" size="40">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Availability:</label>
+            </td>
+            <td>
+                <select>
+                    <option value="true">Available</option>
+                    <option value="false">Not Available</option>
+                </select>
+            </td>
+            <td>
+                <label>Reorder Quantity:</label>
+            </td>
+            <td>
+                <input type="text" size="40">
+            </td>
+        </tr>
+        <tr>
+            <td id="categories" colspan="2" style="vertical-align: top; border:none;">
+                <table style="width:100%; padding: 10px; border:none;">
+                    <tr>
+                        <td style="vertical-align: top; border:none;">
+                            <label style="float: left;">Categories:</label>
+                            <button style="float: right;">Add Category</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test1" name="test1" value="t1">
+                            <label style="float: none; margin-right: 10px;" for="test1">Test 1</label>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test4" name="test4" value="t4">
+                            <label style="float: none; margin-right: 10px;" for="test4">Test 4</label><br>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test2" name="test2" value="t2">
+                            <label style="float: none; margin-right: 10px;" for="test2">Test 2</label>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test5" name="test5" value="t5">
+                            <label style="float: none; margin-right: 10px;" for="test5">Test 5</label><br>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test3" name="test3" value="t3">
+                            <label style="float: none; margin-right: 10px;" for="test3">Test 3</label>
+                            <input style="float: none; margin-right: 3px;" type="checkbox" id="test6" name="test6" value="t6">
+                            <label style="float: none; margin-right: 10px;" for="test6">Test 6</label><br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="desc" colspan="2" style="border:none;">
+                <table style="width: 100%; border:none;">
+                    <tr>
+                        <td>
+                            <label style="float: left;">Product Description:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea style="height:100px; width:90%; padding:5px;"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
