@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './shopping.css';
 
 function ShoppingCart() {
   // State for the shopping cart items
@@ -42,30 +43,39 @@ function ShoppingCart() {
   }
 
   return (
-    <div>
+    <div className="shopping-cart">
       <h2>Shopping Cart</h2>
       <div>
-        <h3>Cart Total: ${total.toFixed(2)}</h3>
+        <h3 className="cart-total">Cart Total: ${total.toFixed(2)}</h3>
         <ul>
           {cart.map((item) => (
             <li key={item.id}>
-              {item.name} - ${item.price.toFixed(2)} x{' '}
-              <input
-                type="number"
-                value={item.quantity}
-                onChange={(e) => updateItemQuantity(item.id, parseInt(e.target.value))}
-              />{' '}
-              <button onClick={() => removeItemFromCart(item.id)}>Remove</button>
+              <div className="cart-item">
+                <div className="cart-item-details">
+                  <span className="cart-item-name">{item.name}</span>
+                  <span className="cart-item-price">${item.price.toFixed(2)}</span>
+                </div>
+                <div className="cart-item-controls">
+                  <input
+                    type="number"
+                    className="cart-item-quantity"
+                    value={item.quantity}
+                    onChange={(e) => updateItemQuantity(item.id, parseInt(e.target.value))}
+                  />
+                  <button className="cart-item-remove" onClick={() => removeItemFromCart(item.id)}>Remove</button>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
       </div>
       <div>
-        <button onClick={handleCheckout}>Proceed to Checkout</button>
+        <button className="checkout-button" onClick={handleCheckout}>Proceed to Checkout</button>
       </div>
     </div>
   );
 }
 
 export default ShoppingCart;
+
 
