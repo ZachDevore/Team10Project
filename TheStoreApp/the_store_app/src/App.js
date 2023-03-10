@@ -1,7 +1,9 @@
+import './App.css';
 import logo from './logo.svg';
 import NavigationBar from './Components/NavigationBar';
 import {Route, Routes} from "react-router-dom";
 import IndividualProductView from './Pages/IndividualProductView';
+import PopUp from './Components/PopUp';
 
 function App() {
   
@@ -23,3 +25,5 @@ function App() {
       */
 
 export default App;
+
+
