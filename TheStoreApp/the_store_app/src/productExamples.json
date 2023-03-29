@@ -1,0 +1,21 @@
+[
+
+
+
+  
+
+
+    {
+
+        "price": 10.75,
+        "description": "This is a great product",
+        "product name": "wallet",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "avalivility": true
+    
+    }
+]
+
