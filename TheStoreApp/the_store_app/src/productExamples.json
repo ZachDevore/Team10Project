@@ -1,15 +1,242 @@
 [
     {
-
+        "product name": "black metal watch",
+        "image": "/productImages/blackMetalWatch.jpg",
         "price": 10.75,
         "description": "This is a great product",
-        "product name": "wallet",
         "initial quantity": 50,
         "supplier": "j'sconstruction",
         "re-order-notification": 10,
         "re-order-amount": 1000,
         "availability": true
-    
+    },
+
+    {
+        "product name": "headphones",
+        "image": "/productImages/headphones.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "sunglasses",
+        "image": "/productImages/sunglasses.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "perfume",
+        "image": "/productImages/perfume.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "stool",
+        "image": "/productImages/Stool.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "apple watch",
+        "image": "/productImages/appleWatch.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "galaxy watch",
+        "image": "/productImages/galaxyWatch.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "round sunglasses",
+        "image": "/productImages/roundSunglasses.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "playstation 5",
+        "image": "/productImages/playStation5.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "toaster oven",
+        "image": "/productImages/toasterOven.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "table and chair set",
+        "image": "/productImages/tableAndChairSet.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "portable tv",
+        "image": "/productImages/portableTV.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "ipod Nano",
+        "image": "/productImages/ipodNano.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "canon Camera",
+        "image": "/productImages/canonCamera.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "sony Camera",
+        "image": "/productImages/sonyCamera.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "electric kettle",
+        "image": "/productImages/electricKettle.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "analog alarm clock",
+        "image": "/productImages/bellAlarmClock.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "digital alarm clock",
+        "image": "/productImages/digitalAlarmClock.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "table side lamp",
+        "image": "/productImages/bedSideLamp.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
+    },
+
+    {
+        "product name": "chandelier",
+        "image": "/productImages/chandelier.jpg",
+        "price": 10.75,
+        "description": "This is a great product",
+        "initial quantity": 50,
+        "supplier": "j'sconstruction",
+        "re-order-notification": 10,
+        "re-order-amount": 1000,
+        "availability": true
     }
 ]
 
