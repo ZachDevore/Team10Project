@@ -1,12 +1,24 @@
 import React from 'react';
-import Shopping from './shopping_component/shopping';
+import EmailReceipt from './EmailReceipt';
+
 
 function App() {
+  
   return (
-    <div>
-      <Shopping />
-    </div>
+    <>
+      <EmailReceipt />
+    </>
   );
 }
+
+/* This is how to set up routing
+ <div className="container">
+        <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/pricing" element={<Pricing />} />
+         <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+      */
 
 export default App;
