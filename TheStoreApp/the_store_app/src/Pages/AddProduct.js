@@ -1,6 +1,25 @@
+import NavigationBar from '../Components/NavigationBar';
 import '../Styles/addProduct.css';
+import { useState } from 'react';
 
 export default function AddProduct () {
+    const [data, setData] = useState({
+        "ProductName": "name",
+        "ProductPrice": 0,
+        "ProductDescription": "desc",
+        "Availability": true,
+        "ReOrderAmount": 0,
+        "ReOrderNotification": 0,
+        "InitialQuantity": 0,
+        "Supplier": "supplier"
+    })
+    const updateData = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+    }
+
     return (
         <>
             <table style={{width: "100%"}}>
@@ -12,7 +31,7 @@ export default function AddProduct () {
             </colgroup>
             <tbody>
                 <tr>
-                    <td id="navBar" style={{textAlign: "center", border: "1px solid white"}} colSpan="4">Nav Bar</td>
+                    <td id="navBar" style={{textAlign: "center", border: "1px solid white"}} colSpan="4"><NavigationBar /></td>
                 </tr>
                 <tr>
                     <td colSpan="4" style={{border: "1px solid white"}}>
@@ -24,13 +43,13 @@ export default function AddProduct () {
                         <label>Product Name:</label>
                     </td>
                     <td style={{paddingTop: "15px"}}>
-                        <input type="text" size="40"/>
+                        <input name="ProductName" value="leave me alone" onChange={updateData} type="number" size="40"/>
                     </td>
                     <td style={{paddingTop: "15px"}}>
                         <label>Initial Quantity:</label>
                     </td>
                     <td style={{paddingTop: "15px"}}>
-                        <input type="text" size="40"/>
+                        <input name="InitialQuantity" onChange={updateData} type="number" size="40"/>
                     </td>
                 </tr>
                 <tr>
@@ -38,13 +57,13 @@ export default function AddProduct () {
                         <label>Product Price:</label>
                     </td>
                     <td>
-                        <input type="text" size="40" placeholder="$0.00"/>
+                        <input name="ProductPrice" onChange={updateData} type="number" size="40" placeholder="$0.00"/>
                     </td>
                     <td>
                         <label>Minimum Stock Level:</label>
                     </td>
                     <td>
-                        <input type="text" size="40"/>
+                        <input name="minStockLevel" onChange={updateData} type="number" size="40"/>
                     </td>
                 </tr>
                 <tr>
@@ -52,7 +71,7 @@ export default function AddProduct () {
                         <label>Supplier:</label>
                     </td>
                     <td>
-                        <select type="text" style={{marginTop: "4px"}}>
+                        <select name="Supplier" onChange={updateData} type="text" style={{marginTop: "4px"}}>
                             <option>Example</option>
                             <option>Test</option>
                         </select>
@@ -62,7 +81,7 @@ export default function AddProduct () {
                         <label>Reorder Point:</label>
                     </td>
                     <td>
-                        <input type="text" size="40"/>
+                        <input name="ReOrderNotification" onChange={updateData} type="number" size="40"/>
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +89,7 @@ export default function AddProduct () {
                         <label>Availability:</label>
                     </td>
                     <td>
-                        <select>
+                        <select name="Availability" onChange={updateData}>
                             <option value="true">Available</option>
                             <option value="false">Not Available</option>
                         </select>
@@ -79,7 +98,7 @@ export default function AddProduct () {
                         <label>Reorder Quantity:</label>
                     </td>
                     <td>
-                        <input type="text" size="40"/>
+                        <input name="ReOrderAmount" onChange={updateData} type="number" size="40"/>
                     </td>
                 </tr>
                 <tr>
@@ -133,15 +152,55 @@ export default function AddProduct () {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <textarea style={{height: "100px", width: "90%", padding: "5px"}}></textarea>
+                                        <textarea name="ProductDescription" onChange={updateData}style={{height: "100px", width: "90%", padding: "5px"}}></textarea>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                 </tr>
+                <tr>
+                    <td style={{textAlign:"center"}} colSpan="4">
+                        <Button onClick={() => buttonClicked(data)}>
+                            Submit New Product
+                        </Button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </>
     );
+}
+
+function Button({onClick, children}) {
+    return (
+        <button onClick={onClick}>
+            {children}
+        </button>
+    );
+}
+
+function buttonClicked (data) {
+    data.Image = null;
+    let lamData = {
+        "cmd": "insert",
+        "values": data
+    }
+    fetch('https://rk89vj0qf3.execute-api.us-east-1.amazonaws.com/Test/dynamodbmanager', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(lamData)
+    })
+    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            alert("Product added!")
+        }
+        else {
+            alert("Add failed: " + JSON.stringify(response.failure))
+        }
+    })
 }
