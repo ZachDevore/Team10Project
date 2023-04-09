@@ -1,5 +1,5 @@
 import React from 'react';
-import EmailReceipt from './EmailReceipt';
+import EmailReceipt from './EmailReceipt.js';
 
 
 function App() {

@@ -1,42 +1,47 @@
 import React, { useState } from "react";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { CardNumber, ExpirationDate, CVV, PostalCode, SqPaymentForm } from 'react-square-payment-form';
+import 'react-square-payment-form/lib/default.css';
 
 const CheckoutPage = () => {
-  const [loading, setLoading] = useState(false);
-  const stripe = useStripe();
-  const elements = useElements();
+  const [errorMessages, setErrorMessages] = useState([]);
 
-  const handleSubmit = async (event) => {
+  const onPaymentFormSubmit = (event) => {
     event.preventDefault();
-    setLoading(true);
+    setErrorMessages([]);
+    const paymentForm = event.target;
+    const applicationId = 'APPLICATION_ID';
+    const locationId = 'LOCATION_ID';
 
-    const cardElement = elements.getElement(CardElement);
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: "card",
-      card: cardElement,
-    });
-
-    setLoading(false);
-
-    if (error) {
-      console.log(error);
-    } else {
-      console.log(paymentMethod);
-      // Send paymentMethod.id to server for payment processing
-    }
-  };
+    window.Square.paymentForm(applicationId, locationId)
+      .requestCardNonce()
+      .then((nonce) => {
+        // Send the nonce to your server to complete the payment
+        console.log(nonce);
+      })
+      .catch((error) => {
+        setErrorMessages([error.message]);
+        console.error(error);
+      });
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Card details
-        <CardElement />
-      </label>
-      <button disabled={!stripe} type="submit">
-        {loading ? "Loading..." : "Pay now"}
-      </button>
-    </form>
+    <div>
+      <h1>Checkout</h1>
+      <form id="payment-form" onSubmit={onPaymentFormSubmit}>
+        <CardNumber />
+        <ExpirationDate />
+        <CVV />
+        <PostalCode />
+        <button id="pay-button" type="submit">Pay</button>
+      </form>
+      <div className="error-messages">
+        {errorMessages.map((message, index) => (
+          <div key={index}>{message}</div>
+        ))}
+      </div>
+    </div>
   );
 };
 
 export default CheckoutPage;
+
