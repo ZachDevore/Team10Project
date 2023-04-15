@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './signup.css'; // replace with your own CSS file
+import './signup.css'; 
 
 function Signup(props) {
   const [firstName, setFirstName] = useState('');
@@ -10,7 +10,7 @@ function Signup(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`First Name: ${firstName}, Last Name: ${lastName}, Email: ${email}, Password: ${password}`);
-    // Here you can add code to create a new user account and redirect them to the appropriate page
+    //  add code to create a new user account and redirect them to the appropriate page
   }
 
   return (
