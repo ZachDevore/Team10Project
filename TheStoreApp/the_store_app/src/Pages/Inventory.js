@@ -8,7 +8,7 @@ import toaster from '../toaster.jpg';
 import ItemList from '../Components/ItemList';
 /*import './App.css';*/
 
-const items = [
+/*const items = [
   {
     image: toaster,
     productID: 1,
@@ -57,7 +57,7 @@ const items = [
     desc: 'Printed coated canvas and refined pebble leather. Inside zip and multifunction pockets Double zip closure, fabric lining' +
     'Handle with 2 1/4" drop. Outside zip pocket. Adjustable shoulder straps'
   },
-];    
+];  */  
 
 export default function Inventory() {
   return (
@@ -79,20 +79,10 @@ export default function Inventory() {
         </tbody>
       </table>
       <table style={{width: "100%"}}>
-        <colgroup>
-          <col style={{width: "90%"}}/>
-          <col style={{width: "10%"}}/>
-        </colgroup>
         <tbody>
           <tr>
             <td>
               <ItemList rows={items}/>
-            </td>
-            <td id="sideNav">
-              <a href="#">Account Detail</a><br/><br/>
-              <a href="#">Purchase History</a><br/><br/>
-              <a href="#">Contact</a><br/><br/>
-              <a href="#">FAQ</a><br/><br/>
             </td>
           </tr>
         </tbody>
