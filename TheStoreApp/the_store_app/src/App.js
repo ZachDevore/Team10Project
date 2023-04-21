@@ -7,7 +7,10 @@ import socks from './socks.jpg';
 import toaster from './toaster.jpg';*/
 import Inventory from './Pages/Inventory';
 import AddProduct from './Pages/AddProduct';
+import ProductList from './Pages/Inventory';
 import './App.css';
+import NavigationBar from './Components/NavigationBar';
+import {Routes, Route} from 'react-router-dom';
 
 /*const items = [
   {
@@ -65,7 +68,12 @@ import './App.css';
 function App() {
   return (
     <>
-      <AddProduct />
+      <NavigationBar></NavigationBar>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/addproduct" element={<AddProduct />} />
+      </Routes>
+
     </>
     /*<div className="App">
       <table id="topnav" style={{width: "100%"}}>

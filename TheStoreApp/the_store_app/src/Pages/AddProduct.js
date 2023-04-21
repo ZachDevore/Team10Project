@@ -31,9 +31,6 @@ export default function AddProduct () {
             </colgroup>
             <tbody>
                 <tr>
-                    <td id="navBar" style={{textAlign: "center", border: "1px solid white"}} colSpan="4"><NavigationBar /></td>
-                </tr>
-                <tr>
                     <td colSpan="4" style={{border: "1px solid white"}}>
                         <div id="dragDrop" style={{height: "300px", width: "100%", textAlign: "center", lineHeight: "300px", verticalAlign: "middle"}}>Drag & Drop space</div>
                     </td>
@@ -43,7 +40,7 @@ export default function AddProduct () {
                         <label>Product Name:</label>
                     </td>
                     <td style={{paddingTop: "15px"}}>
-                        <input name="ProductName" value="leave me alone" onChange={updateData} type="number" size="40"/>
+                        <input name="ProductName" onChange={updateData} type="text" size="40"/>
                     </td>
                     <td style={{paddingTop: "15px"}}>
                         <label>Initial Quantity:</label>

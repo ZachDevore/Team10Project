@@ -8,10 +8,10 @@ export default function ItemRow({item}) {
         <tr>
           <td><img src={item.image} className="productImage"/></td>
           <td className="info">
-            <span className="name">{item.name}</span>
-            <span className="price">{item.price.toFixed(2)}</span><br/>
-            Quantity in Stock:<span className="qty">{item.qty}</span><br/><br/>
-            <span>{item.desc}</span>
+            <span className="name">{item.ProductName}</span>
+            <span className="price">{item.ProductPrice.toFixed(2)}</span><br/>
+            Quantity in Stock:<span className="qty">{item.InitialQuantity}</span><br/><br/>
+            <span>{item.ProductDescription}</span>
           </td>
         </tr>
       </table>

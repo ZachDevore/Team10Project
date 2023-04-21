@@ -6,6 +6,7 @@ import pm from '../pancakeMix.jpg';
 import socks from '../socks.jpg';
 import toaster from '../toaster.jpg';
 import ItemList from '../Components/ItemList';
+import { useEffect, useState } from 'react';
 /*import './App.css';*/
 
 /*const items = [
@@ -57,27 +58,39 @@ import ItemList from '../Components/ItemList';
     desc: 'Printed coated canvas and refined pebble leather. Inside zip and multifunction pockets Double zip closure, fabric lining' +
     'Handle with 2 1/4" drop. Outside zip pocket. Adjustable shoulder straps'
   },
-];  */  
+]; */
+
+
 
 export default function Inventory() {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    let lamData = {
+      "cmd": "query"
+    }
+    fetch('https://rk89vj0qf3.execute-api.us-east-1.amazonaws.com/Test/dynamodbmanager', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(lamData)
+    })
+    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            //alert("Got data" + JSON.stringify(response));
+            setItems(response.results)
+        }
+        else {
+            alert("Could not load items from database: " + JSON.stringify(response.failure));
+            setItems([]);
+        }
+    });
+  }, [])
+
   return (
     <div className="App">
-      <table id="topnav" style={{width: "100%"}}>
-        <colgroup>
-          <col style={{width: "5%"}}/>
-          <col style={{width: "80%"}}/>
-          <col style={{width: "5%"}}/>
-          <col style={{width: "10%"}}/>
-        </colgroup>
-        <tbody>
-          <tr>
-            <td id="logo"><img src={logo} alt="" style={{height: 30}}/></td>
-            <td><input type="text" size="40" style={{border: "2px solid blue", borderRadius: 6}} placeholder="search..."/></td>
-            <td><img src={cart} alt="" style={{height: 30}}/></td>
-            <td>login</td>
-          </tr>
-        </tbody>
-      </table>
       <table style={{width: "100%"}}>
         <tbody>
           <tr>

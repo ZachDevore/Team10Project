@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content {
+  background-color: white;
+  position: relative;
+  top: 20%;
+  left: -35%;
+  width: 40%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #75BBA7;
+}
+
+.PopUp {
+  text-align: center;
+  background-color: #75BBA7;
+}
+
+.close {
+  color: Black;
+  float: right;
+  font-size: x-large;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+/*input {
+  font-size: larger;
+  padding: 5px;
+  margin: 25px 100px;
+  width: 40%;
+  cursor: text;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #151516;
+  color: #fff;
+}*/
