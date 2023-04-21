@@ -1,4 +1,3 @@
-import NavigationBar from '../Components/NavigationBar';
 import '../Styles/addProduct.css';
 import { useState } from 'react';
 
@@ -11,7 +10,8 @@ export default function AddProduct () {
         "ReOrderAmount": 0,
         "ReOrderNotification": 0,
         "InitialQuantity": 0,
-        "Supplier": "supplier"
+        "Supplier": "supplier",
+        "Image": ""
     })
     const updateData = e => {
         setData({
@@ -33,6 +33,14 @@ export default function AddProduct () {
                 <tr>
                     <td colSpan="4" style={{border: "1px solid white"}}>
                         <div id="dragDrop" style={{height: "300px", width: "100%", textAlign: "center", lineHeight: "300px", verticalAlign: "middle"}}>Drag & Drop space</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colSpan="2" style={{border: "1px solid white", textAlign: "right"}}>
+                        <label>ImageURL:</label>
+                    </td>
+                    <td colSpan="2" style={{border: "1px solid white", textAlign: "left"}}>
+                        <input name="Image" onChange={updateData} type="text" size="40"/>
                     </td>
                 </tr>
                 <tr>
@@ -178,11 +186,11 @@ function Button({onClick, children}) {
 }
 
 function buttonClicked (data) {
-    data.Image = null;
     let lamData = {
         "cmd": "insert",
         "values": data
     }
+    
     fetch('https://rk89vj0qf3.execute-api.us-east-1.amazonaws.com/Test/dynamodbmanager', {
         method: 'POST',
         headers: {
@@ -197,7 +205,7 @@ function buttonClicked (data) {
             alert("Product added!")
         }
         else {
-            alert("Add failed: " + JSON.stringify(response.failure))
+            alert("Add failed: " + JSON.stringify(response))
         }
     })
 }

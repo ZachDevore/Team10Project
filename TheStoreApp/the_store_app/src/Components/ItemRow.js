@@ -6,7 +6,7 @@ export default function ItemRow({item}) {
           <col style={{width:"99%"}}/>
         </colgroup>
         <tr>
-          <td><img src={item.image} className="productImage"/></td>
+          <td><img src={item.Image} className="productImage"/></td>
           <td className="info">
             <span className="name">{item.ProductName}</span>
             <span className="price">{item.ProductPrice.toFixed(2)}</span><br/>
