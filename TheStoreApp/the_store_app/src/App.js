@@ -1,6 +1,5 @@
 import Inventory from './Pages/Inventory';
 import AddProduct from './Pages/AddProduct';
-import ProductList from './Pages/Inventory';
 import './App.css';
 import NavigationBar from './Components/NavigationBar';
 import {Routes, Route} from 'react-router-dom';
