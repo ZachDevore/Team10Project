@@ -22,6 +22,7 @@ export default function AddProduct () {
 
     return (
         <>
+        <div id="addProd">
             <table style={{width: "100%"}}>
             <colgroup>
                 <col style={{width: "20%"}}/>
@@ -173,6 +174,7 @@ export default function AddProduct () {
                 </tr>
             </tbody>
         </table>
+        </div>
     </>
     );
 }
