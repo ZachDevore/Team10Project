@@ -4,15 +4,19 @@ import './App.css';
 import NavigationBar from './Components/NavigationBar';
 import {Routes, Route} from 'react-router-dom';
 import LoginScreen from './Pages/LoginScreen';
+import Cart from './Pages/Cart';
+import PageNotFound from './Pages/PageNotFound';
 
 function App() {
   return (
     <>
       <NavigationBar></NavigationBar>
       <Routes>
+        <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
     </>

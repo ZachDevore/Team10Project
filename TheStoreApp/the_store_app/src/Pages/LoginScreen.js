@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Login () {
+    const navigate = useNavigate();
+
     return (
         <>
             <div style={{margin: "100px"}} id="signIn">
@@ -26,7 +30,11 @@ export default function Login () {
                             <button style={{marginTop: "5px"}}>Sign Up</button>
                         </td>
                         <td style={{textAlign: "right"}}>
-                            <button style={{padding: "10px"}}>Sign In</button>
+                            <button style={{padding: "10px"}}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    navigate("/");
+                                }}>Sign In</button>
                         </td>
                     </tr>
                 </table>

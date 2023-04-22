@@ -4,6 +4,14 @@ body, table {
     color: white;
 }
 
+.summary table {
+    background-color: orange;
+}
+
+.summary tr, .summary td {
+    background-color: orange;
+}
+
 tr, td {
     background-color: black;
     color: white;
