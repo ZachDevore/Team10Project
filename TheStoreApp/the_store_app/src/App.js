@@ -4,15 +4,36 @@ import './App.css';
 import NavigationBar from './Components/NavigationBar';
 import {Routes, Route} from 'react-router-dom';
 import LoginScreen from './Pages/LoginScreen';
+import AboutPage from './Pages/AboutPage';
 
 function App() {
   return (
+    /* <div className="app">
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home title="Welcome to red30" />} />
+        <Route path="about" element={<About />} />
+        <Route path="categories" element={<Categories />}>
+          <Route path=":catId" element={<Category />} />
+        </Route>
+        <Route
+          path="*"
+          element={<h1 className="not-found">Page Not Found</h1>}
+        />
+      </Routes> 
+    */
     <>
       <NavigationBar></NavigationBar>
       <Routes>
         <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
+        <Route path="/AboutPage" element={<AboutPage />} />
+        <Route
+          path="*"
+          element={<h1 className="not-found">Page Not Found</h1>}
+        />
       </Routes>
 
     </>

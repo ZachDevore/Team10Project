@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
 import {FcDvdLogo} from 'react-icons/fc';
 import {BsSearch} from 'react-icons/bs';
 import PopUp from "./PopUp";
@@ -12,10 +12,10 @@ export default function NavigationBar() {
         </div>
         <ul>
             <PopUp />
-            <Link to="/">Sign in</Link>            
-            <Link to="/">My Cart</Link>
-            <Link to="/">About Us</Link> 
-            <Link to="/">Today's Deals</Link>
+            <NavLink to="/SignUpPage">Sign in</NavLink>            
+            <NavLink to="/AddProduct">Add Item</NavLink>
+            <NavLink to="/AboutPage">About Us</NavLink> 
+            <NavLink to="/">Today's Deals</NavLink>
         </ul>
     </nav>
     );
