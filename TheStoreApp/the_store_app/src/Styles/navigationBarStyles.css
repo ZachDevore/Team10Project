@@ -1,0 +1,28 @@
+
+.navBar {
+    background-color: #eee;
+}
+
+ul {
+   
+    list-style: none;
+    display:flex;
+    margin: 1vh 0;
+    padding:1vh 0;
+
+}
+
+li {
+    margin:1vh 0;
+    padding: 0 3vw;
+    
+}
+
+li :hover {
+    background-color: aqua;
+}
+
+img {
+    height: 10vh;
+    width: 10vw;
+}
