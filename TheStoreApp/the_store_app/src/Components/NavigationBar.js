@@ -3,6 +3,7 @@ import {FcDvdLogo} from 'react-icons/fc';
 import {BsSearch} from 'react-icons/bs';
 import PopUp from "./PopUp";
 import CartWidget from "./CartWidget";
+import AboutPage from "../Pages/AboutPage";
 
 export default function NavigationBar() {
     return (
@@ -21,6 +22,7 @@ export default function NavigationBar() {
                     <ul>
                         
                         <Link style={{color: "white"}} to="/">Home</Link>&nbsp;&nbsp;
+                        <Link style={{color: "white"}} to="/AboutPage">About Us</Link>&nbsp;&nbsp;
                         <Link style={{color: "white"}} to="/addProduct">Add Product</Link>&nbsp;&nbsp;
                         <Link style={{color: "white"}} to="/signin">Sign in</Link>&nbsp;&nbsp;         
                         <Link style={{color: "white"}} to="/cart">My Cart</Link>&nbsp;&nbsp;

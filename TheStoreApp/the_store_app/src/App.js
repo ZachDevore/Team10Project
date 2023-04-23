@@ -6,6 +6,7 @@ import {Routes, Route} from 'react-router-dom';
 import LoginScreen from './Pages/LoginScreen';
 import Cart from './Pages/Cart';
 import PageNotFound from './Pages/PageNotFound';
+import AboutPage from './Pages/AboutPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavigationBar></NavigationBar>
       <Routes>
         <Route path="/cart" element={<Cart />} />
+        <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
