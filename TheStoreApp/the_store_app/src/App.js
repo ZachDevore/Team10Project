@@ -7,6 +7,7 @@ import LoginScreen from './Pages/LoginScreen';
 import Cart from './Pages/Cart';
 import PageNotFound from './Pages/PageNotFound';
 import AboutPage from './Pages/AboutPage';
+import SignUp from './Components/SignUpPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
+        <Route path="/signUp" element={< SignUp/>} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 

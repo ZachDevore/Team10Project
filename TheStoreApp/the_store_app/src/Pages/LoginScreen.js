@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login () {
     const navigate = useNavigate();
@@ -27,6 +27,7 @@ export default function Login () {
                                 <option value="customer">Sign in as Customer</option>
                                 <option value="admin">Sign in as Admin</option>
                             </select><br/>
+                            <Link style={{color: "white"}} to="/SignUp">Sign Up</Link>
                             <button style={{marginTop: "5px"}}>Sign Up</button>
                         </td>
                         <td style={{textAlign: "right"}}>

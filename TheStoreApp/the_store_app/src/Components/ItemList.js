@@ -1,6 +1,6 @@
 import ItemRow from './ItemRow';
 
-export default function ItemList({rows}) {
+export default function ItemList( { rows } ) {
     let r = [];
   
     for (let i = 0; i < rows.length; i++) {
