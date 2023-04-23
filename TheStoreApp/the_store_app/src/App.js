@@ -12,14 +12,14 @@ import SignUp from './Components/SignUpPage';
 function App() {
   return (
     <>
-      <NavigationBar></NavigationBar>
+      <NavigationBar />
       <Routes>
         <Route path="/cart" element={<Cart />} />
         <Route path="/AboutPage" element={<AboutPage />} />
         <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
-        <Route path="/signUp" element={< SignUp/>} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 
