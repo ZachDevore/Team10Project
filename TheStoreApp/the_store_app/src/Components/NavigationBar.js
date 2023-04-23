@@ -26,7 +26,7 @@ export default function NavigationBar() {
                         <Link style={{color: "white"}} to="/addProduct">Add Product</Link>&nbsp;&nbsp;
                         <Link style={{color: "white"}} to="/signin">Sign in</Link>&nbsp;&nbsp;         
                         <Link style={{color: "white"}} to="/cart">My Cart</Link>&nbsp;&nbsp;
-                        <Link style={{color: "white"}} to="/">About Us</Link>&nbsp;&nbsp; 
+                        {/* <Link style={{color: "white"}} to="/">About Us</Link>&nbsp;&nbsp;  */}
                         <Link style={{color: "white"}} to="/">Today's Deals</Link>
                     </ul>
                 </td>
