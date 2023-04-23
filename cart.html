@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--Name: Emma Gostling
+	filename: addProductPage.html
+	-->
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign In</title>
+</head>
+<style>
+    body, table {
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+    }
+
+    tr, td {
+        background-color: black;
+        color: white;
+    }
+
+    input, option, button, textarea, select {
+        background-color: lightgrey;
+    }
+
+    label {
+        float: right;
+    }
+
+    input, select {
+        float: left;
+    }
+</style>
+<body>
+    <div style="margin: 100px;" class="cart">
+        <table>
+            <colgroup>
+                <col style="width: 70%;">
+                <col style="width: 30%;">
+            </colgroup>
+            <tr>
+                <td class="itemList">
+                    <table class="item">
+                        <tr class="item">
+                            <td class="img">Image</td>
+                            <td class="desc">
+                                <table>
+                                    <tr>
+                                        <td>Title</td>
+                                        <td>Price</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            Description
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="qty">Quantity</td>
+                            <td class="total">Total</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="summary">
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="3">Summary</td>
+                            </tr>
+                            <tr>
+                                <td>Title</td>
+                                <td>x Qty</td>
+                                <td>= Total</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Total</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><div>(total)</div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>Checkout</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

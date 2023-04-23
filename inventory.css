@@ -1,3 +1,43 @@
 table, td {
-    border: 1px solid black;
+    border: 0px;
+    border-collapse: collapse;
+}
+
+.item {
+    width:100%; 
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 110%;
+}
+
+.price {
+    font-size: 110%;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.info {
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+#mainContent {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+#sideNav {
+    vertical-align: top;
+    padding-left: 5px;
 }

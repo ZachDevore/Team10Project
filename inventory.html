@@ -10,83 +10,28 @@
 	<link href="inventory.css" rel="stylesheet">
 </head>
 <body>
-    <table id="outerFrame" style="width: 100%;">
-        <table id="topnav" style="width: 100%;">
-            <col style="width:10%">
-            <col style="width:60%">
-            <col style="width:10%">
-            <col style="width:20%">
-            <td>logo</td>
-            <td>search bar</td>
-            <td>cart</td>
-            <td>login</td>
-        </table>
-        <table style="width:100%;">
-            <col style="width:10%">
-            <col style="width:80%">
-            <col style="width:10%">
-            <td>side bar</td>
-            <td id="main content">
-                <table style="width:100%">
-                <col style="width:20%">
-                <col style="width:80%">
-                <td>image</td>
-                <td>
-                    <table style="width:100%; border:none">
-                        <tr>
-                            <td style="border:none">
-                                <table style="border:none">
-                                    <td style="border:none">Product Name</td>
-                                    <td style="border:none; font-weight:bold;">Price</td>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr><td style="border:none">Quantity in Stock:</td></tr>
-                        <tr><td style="border:none">Product Description</td></tr>
-                    </table>
-                </td>
-                </table>
-                <table style="width:100%">
-                    <col style="width:20%">
-                    <col style="width:80%">
-                    <td>image</td>
-                    <td>
-                        <table style="width:100%; border:none">
-                            <tr>
-                                <td style="border:none">
-                                    <table style="border:none">
-                                        <td style="border:none">Product Name</td>
-                                        <td style="border:none; font-weight:bold;">Price</td>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr><td style="border:none">Quantity in Stock:</td></tr>
-                            <tr><td style="border:none">Product Description</td></tr>
-                        </table>
-                    </td>
-                </table>
-                <table style="width:100%">
-                    <col style="width:20%">
-                    <col style="width:80%">
-                    <td>image</td>
-                    <td>
-                        <table style="width:100%; border:none">
-                            <tr>
-                                <td style="border:none">
-                                    <table style="border:none">
-                                        <td style="border:none">Product Name</td>
-                                        <td style="border:none; font-weight:bold;">Price</td>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr><td style="border:none">Quantity in Stock:</td></tr>
-                            <tr><td style="border:none">Product Description</td></tr>
-                        </table>
-                    </td>
-                </table>
-            </td>
-            <td>side bar</td>
-        </table>
+    <table id="topnav" style="width: 100%;">
+        <col style="width:5%">
+        <col style="width:80%">
+        <col style="width:5%">
+        <col style="width:10%">
+        <td id="logo"><img src="logo.jpg" style="height: 30px"></td>
+        <td><input type="text" size="40" style="border: 2px solid blue; border-radius: 6px;" placeholder="search..."></td>
+        <td><img src="cartLogo.jpg" style="height: 30px"></td>
+        <td>login</td>
+    </table>
+    <table style="width:100%;">
+        <col style="width:90%">
+        <col style="width:10%">
+        <td>
+            <div id="mainContent"></div>
+        </td>
+        <td id="sideNav">
+            <a href="#">Account Detail</a><br><br>
+            <a href="#">Purchase History</a><br><br>
+            <a href="#">Contact</a><br><br>
+            <a href="#">FAQ</a><br><br>
+        </td>
     </table>
 </body>
 <script

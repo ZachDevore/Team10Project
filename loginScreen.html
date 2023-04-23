@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--Name: Emma Gostling
+	filename: addProductPage.html
+	-->
+	<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign In</title>
+</head>
+<style>
+    body, table {
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+    }
+
+    tr, td {
+        background-color: black;
+        color: white;
+    }
+
+    input, option, button, textarea, select {
+        background-color: lightgrey;
+    }
+
+    label {
+        float: right;
+    }
+
+    input, select {
+        float: left;
+    }
+</style>
+<body>
+    <div style="margin: 100px;" id="signIn">
+        <table style="margin: 0 auto;">
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 50%;">
+            </colgroup>
+            <tr>
+                <td colspan="2">
+                    <input type="text" size="40" placeholder="Username">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" size="40" placeholder="Password">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">
+                    <select name="signInOpt" id ="signInOpt">
+                        <option value="customer">Sign in as Customer</option>
+                        <option value="admin">Sign in as Admin</option>
+                    </select><br>
+                    <button style="margin-top: 5px;">Sign Up</button>
+                </td>
+                <td style="text-align: right;">
+                    <button style="padding: 10px;">Sign In</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
