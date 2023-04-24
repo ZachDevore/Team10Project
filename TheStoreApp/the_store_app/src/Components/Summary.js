@@ -37,7 +37,7 @@ export default function Summary () {
                     </tr>
                     <tr>
                         <td colSpan="2" style={{textAlign: "right"}}>
-                            <button>Checkout</button>
+                            <button style={{fontSize: "110%", fontWeight: "bold", marginTop: "5px"}}>Checkout</button>
                         </td>
                     </tr>
                 </tbody>

@@ -34,7 +34,7 @@ export default function Login () {
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="text" name="password" onChange={updateData} size="40" placeholder="Password"/>
+                            <input type="password" name="password" onChange={updateData} size="40" placeholder="Password"/>
                         </td>
                     </tr>
                     <tr>
