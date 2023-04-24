@@ -7,6 +7,12 @@ export const stateCart = createGlobalState({
   total: 0.0,    // Value of all items currently in the cart
 });
 
+export const stateUser = createGlobalState({
+  // Initial cart values
+  userId: "", 
+  isAdmin: false
+});
+
 function createGlobalState(initState = null) {
     const prototype = {
       data: { state: initState, reRenderFns: [] },

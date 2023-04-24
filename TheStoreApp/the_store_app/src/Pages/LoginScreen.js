@@ -1,7 +1,23 @@
+import {stateUser, useGlobalState} from "../globalState"
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Login () {
     const navigate = useNavigate();
+    const [userData, setUserData] = useGlobalState(stateUser);
+
+    const [data, setData] = useState ({
+        username: "",
+        signInOpt: "customer",
+        password: ""
+    })
+
+    const updateData = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <>
@@ -13,17 +29,17 @@ export default function Login () {
                     </colgroup>
                     <tr>
                         <td colspan="2">
-                            <input type="text" size="40" placeholder="Username"/>
+                            <input type="text" name="username" onChange={updateData} size="40" placeholder="Username"/>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="text" size="40" placeholder="Password"/>
+                            <input type="text" name="password" onChange={updateData} size="40" placeholder="Password"/>
                         </td>
                     </tr>
                     <tr>
                         <td style={{textAlign: "left"}}>
-                            <select name="signInOpt" id ="signInOpt">
+                            <select name="signInOpt" onChange={updateData} id ="signInOpt">
                                 <option value="customer">Sign in as Customer</option>
                                 <option value="admin">Sign in as Admin</option>
                             </select><br/>
@@ -33,6 +49,7 @@ export default function Login () {
                             <button style={{padding: "10px"}}
                                 onClick={(e) => {
                                     e.stopPropagation();
+                                    doSignIn(data, userData, setUserData)
                                     navigate("/");
                                 }}>Sign In</button>
                         </td>
@@ -41,4 +58,11 @@ export default function Login () {
             </div>
         </>
     )
+}
+
+function doSignIn(data, userData, setUserData) {
+    let ud = JSON.parse(JSON.stringify(userData));
+    ud.userId = data.username;
+    ud.isAdmin = (data.signInOpt=="admin");
+    setUserData(ud);
 }

@@ -19,7 +19,7 @@ export default function Cart () {
                         <td className="itemList">
                             <CartList rows={cartData.cartItems} />
                         </td>
-                        <td className="summary">
+                        <td>
                             <div className="summary">
                                 <Summary />
                             </div>

@@ -5,11 +5,15 @@ body, table {
 }
 
 .summary table {
-    background-color: orange;
+    background-color: rgb(128, 58, 7);
 }
 
 .summary tr, .summary td {
-    background-color: orange;
+    background-color: rgba(128, 58, 7);
+}
+
+.summary {
+    margin-left: 50px;
 }
 
 tr, td {

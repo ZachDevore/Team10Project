@@ -1,6 +1,7 @@
 import React from 'react';
 import {useGlobalState, stateCart } from '../globalState';
 import { useEffect, useState } from 'react';
+import addProductToCart from './CartUtil';
 
 
 export default function AddToCartButton(props) {
@@ -14,36 +15,8 @@ export default function AddToCartButton(props) {
             onClick={(e) => {
                 if (e.target == e.currentTarget) { // Click on 'add to cart' button, not including the embedded quantity input field
                     e.stopPropagation();
-                    // Calculate line item details
-                    let qty = 1; // INPUT field returns values as strings
-                    let lineItemTotal = productData.ProductPrice * qty
-
-                    // Update the global card data by cloning, updating, and setting
-                    let cd = JSON.parse(JSON.stringify(cartData)); // Deep copy global cart data
-                    let inCart = false;
-                    for (let i = 0; i < cd.cartItems.length; i++) {
-                        if (cd.cartItems[i].product.ProductID == productData.ProductID) {
-                            cd.cartItems[i].quantity ++;
-                            cd.cartItems[i].lineItemTotal += productData.ProductPrice;
-                            cd.count ++;
-                            cd.total += productData.ProductPrice;
-                            inCart=true;
-                            break;
-                        }
-                    }
-                    if (!inCart) {
-                        cd.cartItems.push({  // Add this item, quantity, and line item total
-                            product: productData, 
-                            quantity: qty, 
-                            lineItemTotal: lineItemTotal}); 
-                            cd.total = cd.total + lineItemTotal; 
-                            cd.count = cd.count + qty;
-                    }
-                    // Update cart totals
-
-                    // Update global cart state with new state data
-                    setCartData(cd); 
-
+                    let cd = addProductToCart(cartData, productData, 1, setCartData)
+                    
                     //debugger;
                     console.log("Added product to cart. Cart data is now:");
                     console.log(cd);
