@@ -141,3 +141,13 @@ function updateCartTotals(cart) {
         cart.total += item.lineItemTotal;
     }
 }
+
+export function emptyCart(cartData, setCartData) {
+
+    // Update the global card data by cloning, updating, and setting
+    let cd = JSON.parse(JSON.stringify(cartData)); // Deep copy global cart data
+        cd.cartItems = [];
+        updateCartTotals(cd);      // update cart totals
+        setCartData(cd);           // update globall cart state
+        return cd;
+}

@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { stateCart, useGlobalState } from '../globalState';
 
 export default function Summary () {
     const [cartData, setCartData] = useGlobalState(stateCart);
+    const navigate = useNavigate();
 
     return (
         <>
@@ -37,7 +39,12 @@ export default function Summary () {
                     </tr>
                     <tr>
                         <td colSpan="2" style={{textAlign: "right"}}>
-                            <button style={{fontSize: "110%", fontWeight: "bold", marginTop: "5px"}}>Checkout</button>
+                            <button style={{fontSize: "110%", fontWeight: "bold", marginTop: "5px"}}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    navigate("/checkout");
+                                }}
+                            >Checkout</button>
                         </td>
                     </tr>
                 </tbody>
