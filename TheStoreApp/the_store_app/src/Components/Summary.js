@@ -1,42 +1,55 @@
+import { useNavigate } from 'react-router-dom';
 import { stateCart, useGlobalState } from '../globalState';
 
 export default function Summary () {
     const [cartData, setCartData] = useGlobalState(stateCart);
+    const navigate = useNavigate();
 
     return (
         <>
-            <table style={{backgroundColor: "orange"}}>
+        <div style={{backgroundColor: "rgb(128, 58, 7)", border:"1px solid white" ,borderRadius: "10px", padding: "7px"}}>
+            <table style={{width: "100%"}}>
+                <colgroup>
+                    <col style={{textAlign: "left"}}/>
+                    <col style={{textAlign: "right"}}/>
+                </colgroup>
                 <tbody>
                     <tr>
-                        <td colSpan="2">Summary</td>
+                        <td colSpan="2" style={{textAlign: "center", fontWeight: "bold", fontSize: "120%"}}>Summary</td>
                     </tr>
                     <tr>
                         <td>Items</td>
-                        <td>{cartData.count}</td>
+                        <td style={{textAlign: "right"}}>{cartData.count}</td>
                     </tr>
                     <tr>
                         <td>Subtotal</td>
-                        <td>${cartData.total.toFixed(2)}</td>
+                        <td style={{textAlign: "right"}}>${cartData.total.toFixed(2)}</td>
                     </tr>
                     <tr>
                         <td>Tax</td>
-                        <td>${(cartData.total*0.075).toFixed(2)}</td>
+                        <td style={{textAlign: "right"}}>${(cartData.total*0.075).toFixed(2)}</td>
                     </tr>
                     <tr>
                         <td>Shipping</td>
-                        <td>${(cartData.total*0.05).toFixed(2)}</td>
+                        <td style={{textAlign: "right", borderBottom: "1px solid white"}}>${(cartData.total*0.05).toFixed(2)}</td>
                     </tr>
-                    <tr>
+                    <tr style={{fontWeight: "bold"}}>
                         <td>Total</td>
-                        <td><div>${(cartData.total*1.125).toFixed(2)}</div></td>
+                        <td><div style={{textAlign: "right"}}>${(cartData.total*1.125).toFixed(2)}</div></td>
                     </tr>
                     <tr>
-                        <td>
-                            <button>Checkout</button>
+                        <td colSpan="2" style={{textAlign: "right"}}>
+                            <button style={{fontSize: "110%", fontWeight: "bold", marginTop: "5px"}}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    navigate("/checkout");
+                                }}
+                            >Checkout</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
         </>
     )
 }

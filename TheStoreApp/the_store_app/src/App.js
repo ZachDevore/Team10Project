@@ -8,15 +8,19 @@ import Cart from './Pages/Cart';
 import PageNotFound from './Pages/PageNotFound';
 import AboutPage from './Pages/AboutPage';
 import SignUp from './Components/SignUpPage';
+import Checkout from './Pages/Checkout';
+import Confirmation from './Pages/Confirmation';
 
 function App() {
   return (
     <>
       <NavigationBar />
       <Routes>
+        <Route path="/" element={<Inventory />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/AboutPage" element={<AboutPage />} />
-        <Route path="/" element={<Inventory />} />
         <Route path="/addproduct" element={<AddProduct />} />
         <Route path="/signin" element={<LoginScreen />} />
         <Route path="/signUp" element={<SignUp />} />
