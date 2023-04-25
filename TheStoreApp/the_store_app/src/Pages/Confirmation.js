@@ -1,8 +1,9 @@
-export default function () {
+export default function confirmation() {
     return (
         <>
             <div>
-                Thank you for your order. Your confirmation number is:<br/><br/><bold>091823098123</bold>
+                Thank you for your order. Your confirmation number is:<br/><b>091823098123</b>
+                <br/><br/> You should recieve a confirmation email shortly.
             </div>
         </>
     )
