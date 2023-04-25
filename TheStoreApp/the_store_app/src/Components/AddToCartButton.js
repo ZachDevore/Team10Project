@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import addProductToCart from './CartUtil';
 
 
+
 export default function AddToCartButton(props) {
     const [cartData, setCartData] = useGlobalState(stateCart);
     const [quan, setQuan] = useState("1");  // Local state tracking the value of the quanity field (as a string)
