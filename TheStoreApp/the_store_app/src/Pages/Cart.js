@@ -1,6 +1,7 @@
 import CartList from "../Components/CartList";
-import CartRow from "../Components/CartRow"
-import Summary from "../Components/Summary"
+import CartRow from "../Components/CartRow";
+import Summary from "../Components/Summary";
+import PayPalPmt from "../Components/PayPalPmt";
 import { stateCart, useGlobalState } from '../globalState';
 
 export default function Cart () {
@@ -27,6 +28,7 @@ export default function Cart () {
                     </tr>
                     </tbody>
                 </table>
+                <PayPalPmt />
             </div>
         </>
     )
